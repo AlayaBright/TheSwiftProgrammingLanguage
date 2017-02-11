@@ -1,3 +1,5 @@
+import Foundation
+
 print("------ Chapter 17: Optional Chaining")
 
 print("\n-------- Section: Optional Chaining as an Alternative to Forced Unwrapping\n")

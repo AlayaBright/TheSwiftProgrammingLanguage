@@ -67,6 +67,8 @@ class SomeClass: NSObject {
     }
 }
 
+#if !os(Linux)
+
 let selectorForMethod = #selector(SomeClass.doSomething(_:))
 let selectorForPropertyGetter = #selector(getter: SomeClass.property)
 
@@ -77,8 +79,12 @@ extension SomeClass {
 
 let anotherSelector = #selector(SomeClass.doSomething(_:) as (SomeClass) -> (String) -> Void)
 
+#endif
+
 
 print("\n---------- Key-Path Expression\n")
+
+#if !os(Linux)
 
 @objc class SomeClass2: NSObject {
     var someProperty: Int
@@ -99,6 +105,8 @@ if let value = c.value(forKey: keyPath) {
     print(value)
 }
 // Prints "12"
+
+#endif
 
 
 print("\n---------- Initializer Expression\n")

@@ -1,3 +1,5 @@
+import Foundation
+
 print("------ Chapter: A Swift Tour\n")
 
 print("Hello, world!")

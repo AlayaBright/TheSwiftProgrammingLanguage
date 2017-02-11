@@ -1,3 +1,5 @@
+import Foundation
+
 print("------ Chapter 03: Strings and Characters")
 
 print("\n-------- Section: String Literals\n")

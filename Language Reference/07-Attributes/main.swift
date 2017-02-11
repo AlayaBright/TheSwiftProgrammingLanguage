@@ -30,6 +30,8 @@ class MyClass2 {
 class MyClass3 {
 }
 
+#if !os(Linux)
+
 @objc
 class ExampleClass: NSObject {
     var enabled: Bool {
@@ -39,3 +41,5 @@ class ExampleClass: NSObject {
         }
     }
 }
+
+#endif

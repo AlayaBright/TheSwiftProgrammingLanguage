@@ -450,6 +450,8 @@ for object in objects {
 
 print("\n-------- Section: Optional Protocol Requirements\n")
 
+#if !os(Linux)
+
 @objc protocol CounterDataSource {
     @objc optional func increment(forCount count: Int) -> Int
     @objc optional var fixedIncrement: Int { get }
@@ -508,6 +510,8 @@ for _ in 1...5 {
 // -1
 // 0
 // 0
+
+#endif
 
 
 print("\n-------- Section: Protocol Extensions\n")

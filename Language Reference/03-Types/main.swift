@@ -60,12 +60,16 @@ let someInstance: SomeBaseClass = SomeSubClass()
 type(of: someInstance).printClassName()
 // Prints "SomeSubClass"
 
+#if !os(Linux)
+
 if type(of: someInstance) === someInstance.self {
     print("The dynamic and static type of someInstance are the same")
 } else {
     print("The dynamic and static type of someInstance are different")
 }
 // Prints "The dynamic and static type of someInstance are different"
+
+#endif
 
 class AnotherSubClass: SomeBaseClass {
     let string: String
